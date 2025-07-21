@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non‑Disclosure Agreement Form</title>
+  <link rel="icon" href="https://dentalpracticetransitions.henryschein.com/favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background-color: #0072ce;
+      color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #005fa3;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #0072ce;
+      margin-bottom: 10px;
+    }
+
+    .nda-text {
+      max-height: 300px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      border-left: 4px solid #0072ce;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox input {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #0072ce;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .confirmation {
+      text-align: center;
+      padding: 20px;
+      background-color: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      color: #2e7d32;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        display: none;
+        background: #0072ce;
+        padding: 10px;
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 4px;
+      }
+    }
+
+    .hamburger { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Today's Dental Alexandria</div>
+    <nav>
+      <ul class="menu" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Selling</a></li>
+        <li><a href="#">Practice Listings</a></li>
+        <li><a href="#">Purchaser Resources</a></li>
+        <li><a href="#">Why Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Non‑Disclosure Agreement Form</h1>
+  <p>Please read the following Confidentiality Agreement. By completing the form below and clicking “Agree and Submit”, you agree to the terms and conditions of the Confidentiality Agreement.</p>
+
+  <div class="nda-text">
+This CONFIDENTIALITY AGREEMENT ("Agreement") is entered into as of the date of submission set forth below ("Submission Date"), by and between the undersigned (the "Receiving Party") and the Henry Schein Dental Practice Transitions entity set forth immediately below ("HSDPT")...
+  </div>
+
+  <form id="ndaForm">
+    <div class="form-group">
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name *</label>
+      <input type="text" id="lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="zip">ZIP Code *</label>
+      <input type="text" id="zip" pattern="[0-9]{5,6}" required>
+    </div>
+    <div class="form-group">
+      <label for="city">City *</label>
+      <input type="text" id="city" required>
+    </div>
+    <div class="form-group checkbox">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I agree to the above Confidentiality Agreement *</label>
+    </div>
+    <button type="submit">Agree & Submit</button>
+  </form>
+
+  <div class="confirmation" id="confirmation" style="display:none;">
+    <h2>Thank you!</h2>
+    <p>Your NDA has been submitted successfully.</p>
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('open');
+}
+
+document.getElementById('ndaForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const zip = document.getElementById('zip').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const agree = document.getElementById('agree').checked;
+
+  if (!firstName || !lastName || !email || !phone || !zip || !city || !agree) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  document.getElementById('ndaForm').style.display = 'none';
+  document.getElementById('confirmation').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
